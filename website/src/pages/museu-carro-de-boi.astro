@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import YouTubeCard from '../components/youtubeCard.astro';
+---
+
+<Layout title="Museu de Carro de Boi">
+
+    <div class="container">
+        <h1>Vídeos Museu de Carro de Boi</h1>
+    </div>
+
+    <div>
+        <YouTubeCard title="Quim Costa - O construtor de carros-de-bois" id="uZUxismlHyY" />
+        <YouTubeCard title="SEU IVAN - MUSEU DO CARRO DE BOI - SÃO BENTO DO SAPUCAÍ SP" id="r_YjHegSHWA" />
+        <YouTubeCard title="MUSEU DO CARRO DE BOI - QUIM COSTA - SÃO BENTO DO SAPUCAÍ SP" id="5cAnplYTL88" />
+        <YouTubeCard title="MUSEU DO CARRO DE BOI QUIM COSTA - SÃO BENTO DO SAPUCAÍ-SP" id="3YPNfHz7LhI" />
+        <YouTubeCard title="HOMENAGEM A QUIM COSTA UM MESTRE CARREIRO E ARTESÃO | MUSEU DO CARRO DE BOI EM SÃO BENTO DO SAPUCAÍ" id="ptdUn-cqn9c" />
+        <YouTubeCard title="VISITA GUIADA NO MUSEU DO CARRO DE BOI | São Bento Tem: Lei Cultural Aldir Blanc" id="bkkaZacdi_c" />
+    </div>
+</Layout>
+
+<style lang="scss" >
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 2rem;
+    }
+
+    div.container {height: 40dvh; background-color: #1E6F4A;}
+</style>

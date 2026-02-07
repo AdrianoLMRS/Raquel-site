@@ -1,0 +1,26 @@
+---
+
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+---
+
+
+<div class="card">
+    <h3>{Astro.props.title}</h3>
+    <YouTube id=`${Astro.props.id}` title=`${Astro.props.title}` />
+</div>
+
+<style lang="scss" >
+    div.card {
+        max-width: 1000px;
+        h3 {
+            text-align: center;
+            padding: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        // lite-youtube {
+
+        // }
+    }
+</style>
