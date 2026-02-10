@@ -66,13 +66,17 @@ import luzia from '../assets/luzia.jpg';
             border-radius: 50%;
             object-fit: cover;
         }
+
+        @media only screen and (max-width: 420px) {
+          transform: scale(.8);
+        }
     }
     div.etc { background-color: #5b6c48; color: #a1c9e3; }
     div.instagram {
 
         @media only screen and (max-width: 420px) {
             padding: .5rem;
-            transform: scale(.9);
+            transform: scale(.7);
         }
         
         img, video, iframe, blockquote, .instagram-media { max-width: 100%; width: 100%; height: auto; box-sizing: border-box; display: block; }
