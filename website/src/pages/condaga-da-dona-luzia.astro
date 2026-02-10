@@ -44,11 +44,11 @@ import luzia from '../assets/luzia.jpg';
         justify-content: center;
         flex-wrap: wrap;
         gap: 25px;
-        padding: .5rem;
+        padding: 1rem;
     }
 
     p {
-			font-size: clamp(1.1rem, 2vw, 1.7rem);
+			font-size: clamp(1rem, 2vw, 1.7rem);
 			line-height: 1.6;
 			max-width: 800px;
 			text-align: left;
@@ -62,28 +62,22 @@ import luzia from '../assets/luzia.jpg';
         align-items: center;
         flex-direction: column;
         gap: 20px;
+
         img {
             border-radius: 50%;
             object-fit: cover;
-        }
-
-        @media only screen and (max-width: 420px) {
-          transform: scale(.8);
-        }
+        }   
     }
     div.etc { background-color: #5b6c48; color: #a1c9e3; }
+
     div.instagram {
 
         @media only screen and (max-width: 420px) {
             padding: .5rem;
-            transform: scale(.7);
         }
-        
         img, video, iframe, blockquote, .instagram-media { max-width: 100%; width: 100%; height: auto; box-sizing: border-box; display: block; }
     }
 
 
     html, body { overflow-x: hidden; }
-
-
 </style>
