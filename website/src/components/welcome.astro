@@ -1,6 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import logoIf from '../assets/logo-if.png';
+---
+
+<div class="images">
+	<Image src={logo} alt="Logo do projeto Vozes do Quilombo" />
+	<Image src={logoIf} alt="Logo do Instituto Federal de São Paulo" />
+</div>
+
 <div class="welcome">
 	<h1>Vozes do Quilombo – Oralidade, Memória e Saberes Tradicionais</h1>
-	<p>Este site reúne registros audiovisuais de mestres, mestras, práticas culturais e espaços de memória do Bairro do Quilombo, em São Bento do Sapucaí, como parte do curso de extensão Vozes do Quilombo: a oralidade que semeia memórias, realizado em parceria com o Instituto Federal de São Paulo – Campus Campos do Jordão e selecionado pelo edital da Escola Nêgo Bispo da Bahia.</p>
+	<p>O curso de extensão "Vozes do Quilombo: a oralidade que semeia memórias" é uma realização do Instituto Federal de São Paulo - campus Campos do Jordão e da Associação dos Moradores e Artesãos do bairro do Quilombo, em São Bento do Sapucaí/SP, por meio do Programa Nego Bispo – uma iniciativa estratégica da Secretaria de Educação Continuada, Alfabetização de Jovens e Adultos, Diversidade e Inclusão (SECADI/MEC), em parceria com o Instituto Federal da Bahia (IFBA) – que visa valorizar e integrar os saberes tradicionais afro-brasileiros, indígenas e quilombolas na formação docente inicial e continuada, contribuindo para uma educação pública mais equitativa, diversa e inclusiva. 
+		<br>O curso está pautado no eixo dos “Saberes Tradicionais Quilombolas”, bem como o subeixo “Memórias e Oralidade” e oferece orientações que possibilitam uma formação autocrítica menos racista, sexista e classista. Tem por objetivo promover uma formação que reconheça e valorize a oralidade dos/as moradores/as do bairro Quilombo como memória viva de saberes tradicionais quilombolas que possibilitam o pluralismo de ideias, de concepções pedagógicas e epistemológicas voltados para uma formação humana, crítica, diversa e inclusiva.  
+		<br>A proposta é divulgar memórias enquanto narrativas próprias e de si e dos modos de vida quilombola, como forma de assumir o lugar da autoria, seja da autonomia do pensamento e/ou da ação em comunidades, para nos situar no mundo. As memórias dos saberes tradicionais quilombolas têm a potencialidade de operar um saber comunitário que, ao mesmo tempo, se assenta individualmente mas, também, coletivamente ao reconhecer a ancestralidade como o elo entre o passado, o presente e o futuro dentro de uma perspectiva contracolonial. A ancestralidade não é apenas uma relação que se estabelece com os ancestrais. Ela é, sobretudo, uma lógica de continuidade que confere sentido e dá forma à memória. 
+		<br>A realização do curso é necessária como ação prática e princípio que: 
+		<br>a) reconhece as formas de exclusão como experiências que impactam o desenrolar da subjetividade, ou seja, influenciam os modos como nos vemos e lidamos com nossas heranças; 
+		<br>b) opõe a violências de opressão como o racismo e o sexismo, o que significa reconhecer a capacidade do curso de agir em prol do ser humano, seja individual ou coletivamente; 
+		<br>c) contribui para o cumprimento da Lei de Diretrizes e Bases da Educação- LDB, por meio das Leis 10.639/03 e 11.645/08, que tornaram obrigatório o Ensino da História e Cultura Afro-brasileira, Africana e Indígena na Educação, bem como a consolidação das Diretrizes Nacionais Curriculares de Educação Escolar Quilombola — Resolução n° 08, de 20 de novembro de 2012 — e a implementação da Política Nacional de Equidade, Educação para as Relações Étnico-Raciais e Educação Escolar Quilombola (PNEERQ), a que se refere a Portaria n° 470, de 24 de maio de 2024, do Ministério da Educação.
+		<br><br>Este site reúne registros audiovisuais de mestres, mestras, práticas culturais e espacos de memória do Bairro do Quilombo, em São Bento do Sapucaí, como parte do curso de extensão Vozes do Quilombo: a oralidade que semeia memórias.
+
+		
+		<br><br>Conheça a equipe da Coordenadoria do Curso:
+		<br>Benedito da Silva Santos (Sr. Ditinho Joana) – Mestre de Saber Tradicional
+		<br>Lucilene Alencar das Dores – Coordenadora e proponente do curso
+		<br>Fernanda Costa Prado Ferreira – Colaboradora Pedagógica
+		<br>Luciana Esther da Silva Felix – Colaboradora Técnica
+		<br>Maria Alexandra Silva Santos – Colaboradora Pedagógica
+		<br>Priscili Silva de Moura – Colaboradora Pedagógica
+		<br>Poliana Ferreira dos Santos – Colaboradora Técnica 
+		<br>Raquel Givandi de Lima – Colaboradora Pedagógica
+		<br>Silvana Braga da Silva (Vaninha) – Colaboradora Pedagógica
+		
+		<br><br>Contatos:
+		<br>lucilene.alencar@ifsp.edu.br
+		<br>cex.cjo@ifsp.edu.br
+		</p>
 </div>
 
 <div class="links">
@@ -15,7 +50,7 @@
 
 <style lang="scss">
 	div.welcome {
-		min-height: 100dvh;
+		min-height: 90dvh;
 
 		display: flex;
 		align-items: center;
@@ -23,12 +58,13 @@
 		flex-direction: column;
 
 		p {
-			font-size: 1.5rem;
+			font-size: clamp(1.1rem, 2vw, 1.7rem);
 			line-height: 1.6;
 			max-width: 800px;
+			text-align: left;
 		}
 
-		h1, p { padding: 2rem; text-align: center; }
+		h1, p { padding: 2rem; }
 	}
 
 	div.links {
@@ -44,11 +80,35 @@
 		a {
 			display: block;
 			font-size: 1.25rem;
-			color: #F2C94C;
 			margin-bottom: 1.5rem;
-			&:hover {
-				color: #9c7705;
-			}	
 		}
 	}
+
+	.images {
+
+		display: flex;
+		column-gap: 50px;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 0.5rem 0;
+		min-height: 20vh;
+		width: 100%;
+		background-color: #5b6c48;
+		> :is(picture, img, svg) {
+			width: clamp(200px, 30vw, 350px);
+			height: auto;
+			max-height: 15vh;
+			object-fit: contain;
+			display: block;
+			padding: 10px;
+		}
+		// @media (max-width: 420px) {
+		// 	> :is(picture, img, svg) {
+		// 		width: clamp(100px, 35%, 180px);
+		// 		max-height: 11vh;
+		// 	}
+		// }
+	}
+
 </style>

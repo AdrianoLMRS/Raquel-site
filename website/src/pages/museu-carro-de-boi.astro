@@ -1,15 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import YouTubeCard from '../components/youtubeCard.astro';
+import { Image } from 'astro:assets';
+import boi from '../assets/boi.jpg';
 ---
 
 <Layout title="Museu de Carro de Boi">
 
     <div class="container">
-        <h1>Vídeos Museu de Carro de Boi</h1>
+        <Image src={boi} alt="Foto de Museu Carro de Boi" />
+        <h1>Museu Carro de Boi</h1>
+        <p><br>O Museu do Carro de Boi "Quim Costa", é um destino fantástico e único no Brasil, localizado no Vale do bairro do Quilombo em São Bento do Sapucaí que resguarda e difunde patrimônios materiais e imateriais relacionados ao carro de boi e a vida do mestre nacional carreiro Joaquim Pereira da Costa (in memoriam) e expõe um acervo de carros de boi, ferramentas e maquinários construídos por ele, além de uma réplica de sua casa. 
+            <br><br>.O museu também desempenha um papel importante na preservação da cultura rural da cidade, sendo um destino territorial que combina cultura, história, arquitetura e imersividade em paisagens peculiares originais de São Bento do Sapucaí, na Serra da Mantiqueira.
+            
+            
+            <br><br><a href="www.instagram.com/museu_do_carro_de_boi/">Instagram.com/museu_do_carro_de_boi/</a></p> 
     </div>
 
-    <div>
+    <div class="etc">
         <YouTubeCard title="Quim Costa - O construtor de carros-de-bois" id="uZUxismlHyY" />
         <YouTubeCard title="SEU IVAN - MUSEU DO CARRO DE BOI - SÃO BENTO DO SAPUCAÍ SP" id="r_YjHegSHWA" />
         <YouTubeCard title="MUSEU DO CARRO DE BOI - QUIM COSTA - SÃO BENTO DO SAPUCAÍ SP" id="5cAnplYTL88" />
@@ -29,5 +37,25 @@ import YouTubeCard from '../components/youtubeCard.astro';
         padding: 2rem;
     }
 
-    div.container {height: 40dvh; background-color: #1E6F4A;}
+    p {
+			font-size: clamp(1.1rem, 2vw, 1.7rem);
+			line-height: 1.6;
+			max-width: 800px;
+			text-align: left;
+		}
+
+    div.container { min-height: 40dvh;
+        padding: 2rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    div.etc { background-color: #5b6c48; color: #a1c9e3; }
 </style>

@@ -1,15 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import YouTubeCard from '../components/youtubeCard.astro';
+import { Image } from 'astro:assets';
+import ditinho from '../assets/ditinho.jpg';
 ---
 
 <Layout title="Sr. Ditinho Joana">
 
     <div class="container">
-        <h1>Vídeos condaga da Dona Luzia</h1>
+        <Image src={ditinho} alt="Foto de Sr. Ditinho Joana" />
+        <h1>Sr. Ditinho Joana</h1>
+        <p>Benedito da Silva Santos é o nome de Ditinho Joana, ex – lavrador, nascido em 12 de Março de 1945 no Bairro do Quilombo, em São Bento do Sapucaí na Serra da Mantiqueira. Local onde instalou uma família de escravos libertos por volta de 1815 chegavam dando vida a comunidade.
+            <br><br>Iniciou seu trabalho de escultor em 1974 quando encontrou uma raiz com várias formas de bichos como: girafa, gato, cavalo e cachorro. Essa raiz foi a inspiração que o fez começar a esculpir em madeira.
+            <br>Seu primeiro trabalho foi um padre e um índio feito na luz de lamparina clareado pela sua mãe Maria Joana. Essa escultura permanece até hoje em seu ateliê.
+            <br>Ditinho Joana tem como principal característica registrar com muita sensibilidade uma parcela representativa do povo brasileiro: a comunidade rural.
+            <br>Sua primeira exposição foi em 1979 em São Paulo na Avenida Europa onde começou a ser divulgado e neste mesmo ano foi avaliado por Pietro Maria Bardi no MASP e ganhou um espaço para mostrar seu trabalho na Record num programa cultural.
+            <br>Hoje ainda continua esculpindo com seus três filhos retratando o povo da roça, mas também retrata algumas profissões dos dias atuais, santos, objetos, símbolos, etc.
+            
+            <br><br><a href="http://www.atelieditinhojoana.com.br">www.atelieditinhojoana.com.br</a>
+            <br>@atelieditinhojoana</p> 
     </div>
 
-    <div>
+    <div class="etc">
         <YouTubeCard title="A arte de Ditinho Joana" id="Xe1j6c0hVx4" />
         <YouTubeCard title="Ditinho Joana no Programa do Jô - Parte 1" id="QOZKjf81q9Q" />
         <YouTubeCard title="Ditinho Joana no Programa do Jô parte 2" id="QWTujwtjYCI" />
@@ -25,7 +37,7 @@ import YouTubeCard from '../components/youtubeCard.astro';
 </Layout>
 
 <style lang="scss" >
-    div {
+    div.etc {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -34,5 +46,26 @@ import YouTubeCard from '../components/youtubeCard.astro';
         padding: 2rem;
     }
 
-    div.container {height: 40dvh; background-color: #1E6F4A;}
+    p {
+			font-size: clamp(1.1rem, 2vw, 1.7rem);
+			line-height: 1.6;
+			max-width: 800px;
+			text-align: left;
+		}
+
+    div.container { min-height: 40dvh;
+        padding: 2rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    div.etc { background-color: #5b6c48; color: #a1c9e3; }
 </style>
